@@ -3,7 +3,7 @@
 function merchium_store_activate()
 {
     $content = <<<EOT
-<!-- Merchium code. Please do not remove this line otherwise your Merchium shopping cart will not work properly. -->
+<!-- Merchium code. Please do not remove this line or your Merchium shopping cart will not work properly. -->
 [merchium_store]
 <!-- Merchium code end -->
 EOT;
