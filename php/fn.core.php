@@ -98,15 +98,12 @@ function merchium_register_admin_scripts()
     wp_enqueue_script('jquery-ui-dialog');
     wp_enqueue_style('wp-jquery-ui-dialog');
 
-    wp_register_script('merchium-admin-js', plugins_url('js/admin.js', MERCHIUM_PLUGIN_FILE));
-    wp_enqueue_script('merchium-admin-js');
+    wp_enqueue_script('merchium-admin-js', plugins_url('js/admin.js', MERCHIUM_PLUGIN_FILE));
 
-    wp_register_style('merchium-admin-css', plugins_url('css/admin.css', MERCHIUM_PLUGIN_FILE));
-    wp_enqueue_style('merchium-admin-css');
+    wp_enqueue_style('merchium-admin-css', plugins_url('css/admin.css', MERCHIUM_PLUGIN_FILE));
 
     if (version_compare(get_bloginfo('version'), '3.8-beta') > 0) {
-        wp_register_style('merchium-admin-css-3.8', plugins_url('css/admin-3.8.css', MERCHIUM_PLUGIN_FILE));
-        wp_enqueue_style('merchium-admin-css-3.8');
+        wp_enqueue_style('merchium-admin-css-3.8', plugins_url('css/admin-3.8.css', MERCHIUM_PLUGIN_FILE));
     }
 
     // Init
@@ -125,11 +122,29 @@ function merchium_register_admin_scripts()
 function merchium_register_frontend_scripts()
 {
     $page = MerchiumPage::instance();
-    if ($page->hasStore() && $page->hasFragment()) {
-        wp_enqueue_script('jquery');
+    if ($page->hasStore()) {
+        if ($page->hasFragment()) {
+            wp_enqueue_script('jquery');
 
-        wp_register_script('merchium-frontend-fragment-js', plugins_url('js/frontend-fragment.js', MERCHIUM_PLUGIN_FILE), 'jquery');
-        wp_enqueue_script('merchium-frontend-fragment-js');
+            wp_register_script('merchium-frontend-fragment-js', plugins_url('js/frontend-fragment.js', MERCHIUM_PLUGIN_FILE), 'jquery');
+            wp_enqueue_script('merchium-frontend-fragment-js');
+        }
+
+        wp_enqueue_style('merchium-frontend-css', plugins_url('css/frontend.css', MERCHIUM_PLUGIN_FILE));
+        
+        // Theme scripts
+        $version = get_bloginfo('version');
+        if (version_compare( $version, '3.4' ) < 0) {
+            $theme_name = get_current_theme();
+        } else {
+            $theme = wp_get_theme();
+            $theme_name = $theme->get('Name');
+        }
+        $css_file = strtolower(str_replace(' ', '-', $theme_name));
+        $css_file = 'css/frontend/themes/' . $css_file . '.css';
+        if (file_exists(MERCHIUM_PLUGIN_DIR . '/' . $css_file)) {
+            wp_enqueue_style('merchium-frontend-theme-css', plugins_url($css_file, MERCHIUM_PLUGIN_FILE));
+        }
     }
 }
 

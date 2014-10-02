@@ -50,7 +50,7 @@ if (is_admin()) {
     add_shortcode('merchium_store', 'merchium_store');
     add_action('wp_title', 'merchium_wp_title');
     add_action('wp_head', 'merchium_wp_head');
-    add_action('wp_enqueue_scripts', 'merchium_register_frontend_scripts');
+    add_action('wp_enqueue_scripts', 'merchium_register_frontend_scripts', 20);
     
     // Compatibility
     add_action('wp', 'merchium_seo_ultimate_compatibility', 0);
