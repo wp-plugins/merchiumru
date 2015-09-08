@@ -148,6 +148,7 @@
     box-shadow: none;
     color: #ffffff !important;
     opacity: 0.9;
+    outline: none;
 }
 
 @media screen and (max-width: 782px) {
@@ -206,6 +207,10 @@
     line-height: 1.7;
 }
 
+.merchium-dialog {
+    padding:0;
+}
+
 .merchium-dialog .merchium-dialog-content {
     overflow: hidden;
 }
@@ -230,6 +235,7 @@
     font-size: 15px;
     cursor: pointer;
     line-height: 20px;
+    width: 100%;
 }
 
 .merchium-dialog .merchium-dialog-content input[type="submit"]:hover {
@@ -252,9 +258,11 @@
 .merchium-popup .ui-dialog-titlebar {
     font-size: 28px !important;
     color: #fff !important;
-    padding-bottom: 15px ;
+    padding: 0 1em 15px 1em;
     background: none !important;
     font-weight: 400 !important;
+    text-align: center;
+    border-bottom: 0;
 }
 
 .merchium-popup .ui-dialog-titlebar-close {
@@ -275,19 +283,16 @@
     opacity: 0.6;
 }
 
-
 .merchium-popup .ui-dialog-titlebar-close:before {
     display: none;
 }
 
-    
 .merchium-popup .ui-dialog-title {
     cursor: default;;
     width: 100% !important;
     padding: 7px 0;
     margin: -5px 0 0 0;
 }
-
 
 .merchium-dialog .error-field-box {
     position: absolute;
@@ -331,9 +336,10 @@
     width: 32px;
     height: 32px;
     position: relative;
-    left: 2px;
-    top: 28px;
+    left: 50%;
+    top: 10px;
     display: inline-block;
+    margin-left: -16px;
     visibility: hidden;
 }
 .merchium-dialog .merchium-dialog-content {

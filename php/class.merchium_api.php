@@ -47,7 +47,7 @@ class MerchiumApi
         ));
         $result = $this->http->request($url, $params);
 
-        if (!empty($result['response']['code']) && $result['response']['code'] == 200) {
+        if (is_array($result) && !empty($result['response']['code']) && $result['response']['code'] == 200) {
             return $result['body'];
         }
 

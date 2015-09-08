@@ -33,6 +33,10 @@
                 draggable: false,
                 position: "top",
                 closeText: "hide",
+                position: {
+                    my: "center", 
+                    at: "center" 
+                },
             }).find('.merchium-form').merchiumForm();
         });
 

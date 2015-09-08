@@ -1,11 +1,11 @@
-<?php
+﻿<?php
 /**
  * Plugin Name: Онлайн-магазин Мерчиум
  * Plugin URI:  http://merchium.ru
  * Description: Merchium
  * Author:      Simtech Ltd.
  * Author URI:  http://merchium.ru
- * Version:     1.0.0
+ * Version:     1.0.1
  */
 
 define('MERCHIUM_PLUGIN_FILE', realpath(__FILE__));
