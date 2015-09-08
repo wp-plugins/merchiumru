@@ -1,0 +1,423 @@
+#adminmenu #toplevel_page_merchium div.wp-menu-image {
+    background: url(../images/merchium-icon-default.png) no-repeat 5px 2px;
+    margin: 2px 3px 2px 2px;
+    width: 23px;
+    height: 23px;
+}
+#adminmenu #toplevel_page_merchium:hover div.wp-menu-image,
+#adminmenu #toplevel_page_merchium.current div.wp-menu-image {
+    background: url(../images/merchium-icon-active.png) no-repeat 5px 2px;
+}
+
+/* Common */
+.hidden {
+    display: none;
+}
+/* \Common */
+
+
+.merch-hide-vote-message {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.merchium-settings ol {
+    padding: 0;
+    list-style-position: inside;
+}
+.merchium-settings {
+    margin-left: 30px;
+    max-width: 630px;
+    width: inherit;
+}
+.merchium-settings ol, .merchium-settings ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+.merchium-settings ol li, .merchium-settings ul li {
+    margin: 40px 0 0 0;
+    color: #333333;
+    font-weight: 600;
+    font-size: 20px;
+}
+.merchium-settings ol li h4, .merchium-settings ul li h4 {
+    display: inline-block;
+    margin: 0 0 5px 0;
+    color: #333333;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.5em;
+}
+.merchium-settings ol li *, .merchium-settings ul li * {
+    font-weight: normal;
+    font-size: 13px;
+}
+.merchium-image-container {
+    display: inline-block;
+}
+.merchium-message-image {
+    margin: 30px 0;
+}
+.merchium-message-image img.store-connected {
+    -webkit-border-radius:1000px;
+    -moz-border-radius:1000px;
+    border-radius:1000px;
+    box-shadow: 0 0 0 3px rgba(129, 192, 74, 1);
+}
+.merchium-message {
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 20px;
+    vertical-align: top;
+    font-size: 15px;
+}
+.merchium-message h3 {
+    margin: 0 0 5px 0;
+    font-size: 22px;
+    line-height: 1.5em;
+}
+.merchium-account-buttons {
+    margin-top: 25px;
+}
+.merchium-account-buttons a {
+    cursor: pointer;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f9f9f9;
+    color: #e8541e !important;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600 !important;
+}
+.merchium-account-buttons a:hover {
+    border: 1px solid #e8ac97;
+    background: #f6f6f6;
+}
+.merchium-account-buttons a:first-child {
+    margin-right: 10px;
+}
+.merchium-account-buttons.store-connected {
+    margin-top: 50px;
+}
+.merchium_widget_code_enter {
+    margin-bottom: 40px !important;
+}
+.merchium_widget_code_enter textarea {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    min-height: 245px;
+    max-width: 465px;
+}
+.merchium_widget_code_enter textarea:focus {
+    border: 1px solid #e8ac97;
+}
+.merchium_widget_code_enter textarea:disabled {
+    border: 1px solid #81c05e;
+}
+.merchium-connect-store {
+    max-width: 465px;
+    text-align: right;
+}
+.merchium-connect-store .button-primary {
+    padding: 8px 15px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f9f9f9;
+    box-shadow: none;
+    color: #e8541e !important;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.merchium-connect-store .button-primary {
+    padding: 8px 15px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #9bcb1b;
+    box-shadow: none;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.merchium-connect-store .button-primary:hover, .merchium-connect-store .button-primary:focus {
+    border: 1px solid #bbb;
+    background: #9bcb1b;
+    box-shadow: none;
+    color: #ffffff !important;
+    opacity: 0.9;
+    outline: none;
+}
+
+@media screen and (max-width: 782px) {
+    .merchium-settings {
+        margin-left: 0;
+        max-width: inherit;
+        width: inherit;
+    }
+    .merchium-settings fieldset {
+        min-width: 0px !important;
+        max-width: 100%;
+        width: 100%;
+    }
+    .merchium-message-image {
+        text-align: center;
+    }
+    .image-container {
+        display: block;
+        margin: 0 auto;
+        text-align: ceter;
+    }
+    .merchium-message {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+    }
+    .merchium-account-buttons a {
+        display: block;
+        width: inherit;
+    }
+    .merchium-account-buttons a:first-child {
+        margin-right: 0px;
+        margin-bottom:10px;
+    }
+    .merchium_widget_code_enter textarea {
+        width: 100%;
+    }
+}
+
+/* Popup */
+.merchium-popup {
+    position: fixed;
+    z-index: 300002;
+    margin-top: 5%;
+    padding: 0;
+    border: none !important;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    background: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.merchium-dialog {
+    padding:0;
+}
+
+.merchium-dialog .merchium-dialog-content {
+    overflow: hidden;
+}
+
+.merchium-dialog .merchium-dialog-content input[type="submit"] {
+    float:right;
+    margin: 2px 0;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-style: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #9bcb1b !important;
+    -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    line-height: 20px;
+    width: 100%;
+}
+
+.merchium-dialog .merchium-dialog-content input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+.merchium-dialog .merchium-dialog-content input[type="submit"]:focus {
+    outline: none;
+}
+
+.merchium-dialog .merchium-dialog-content label {
+    color: #fff;
+}
+
+.ui-widget-overlay {
+    opacity: .9 !important;
+    filter: alpha(opacity=90) !important;
+}
+
+.merchium-popup .ui-dialog-titlebar {
+    font-size: 28px !important;
+    color: #fff !important;
+    padding: 0 1em 15px 1em;
+    background: none !important;
+    font-weight: 400 !important;
+    text-align: center;
+    border-bottom: 0;
+}
+
+.merchium-popup .ui-dialog-titlebar-close {
+    cursor: pointer;
+    -webkit-appearance: none;
+    border: 0;
+    width: 24px !important;
+    height: 24px !important;
+    top: -20px;
+    right: 6px;
+    background: url('../images/popup_close_icon.png') no-repeat !important;
+    display: none;
+    background-size: 24px 24px !important;
+    opacity: 0.4;
+}
+
+.merchium-popup .ui-dialog-titlebar-close:hover {
+    opacity: 0.6;
+}
+
+.merchium-popup .ui-dialog-titlebar-close:before {
+    display: none;
+}
+
+.merchium-popup .ui-dialog-title {
+    cursor: default;;
+    width: 100% !important;
+    padding: 7px 0;
+    margin: -5px 0 0 0;
+}
+
+.merchium-dialog .error-field-box {
+    position: absolute;
+    margin-top: -37px;
+    right: 8px;
+    max-width: 160px;
+}
+
+.merchium-dialog .error-field-box span {
+    display: block;
+    background: #f28577;
+    font-size: 13px;
+    color: #fff;
+    padding: 2px 10px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-rendering: auto;
+    vertical-align: bottom;
+}
+
+.merchium-dialog .arrow-bottom-error {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 12px solid #f28577;
+    margin-left: 11px;
+}
+
+.merchium-popup a.merchium-recover-password-link {
+    color: #666;
+    font-size: 12px;
+}
+
+.merchium-popup a.merchium-recover-password-link:hover {
+    color: #999;
+}
+
+.merchium-dialog .store-registration-loader {
+    background: url("../images/store-registration-loader.gif") no-repeat;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    left: 50%;
+    top: 10px;
+    display: inline-block;
+    margin-left: -16px;
+    visibility: hidden;
+}
+.merchium-dialog .merchium-dialog-content {
+    padding: 10px;
+}
+
+.merchium-dialog-login .ui-dialog-titlebar-close {
+    display: block;
+    top: -30px;
+}
+
+.merchium-dialog-login .ui-dialog-titlebar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.merchium-dialog-login a.merchium-recover-password-link {
+    color: #666;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.merchium-dialog-login a.merchium-recover-password-link:hover {
+    color: #999;
+}
+
+.merchium-form {
+    width: 100%;
+}
+
+.merchium-form label {
+    display: block;
+    line-height: 2.5em;
+}
+
+.merchium-form .error-box,
+.merchium-form .info-box {
+    display: none;
+}
+
+.merchium-form .error-box, .merchium-form .info-box {
+    background: #fcb4ad;
+    font-weight: 300;
+    padding: 10px;
+    margin: 20px 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #555;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.merchium-form .info-box {
+    background: #b8dbfe;
+}
+
+.merchium-form input {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.merchium-form input[type="text"],
+.merchium-form input[type="password"],
+.merchium-form textarea,
+.merchium-form input[type="search"] {
+    padding: 12px 0;
+    text-indent: 8px;
+    font-size: 12px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.merchium-form .invalid input, .merchium-form input.invalid {
+    border: 1px solid #D3B5BA !important;
+    background-color: #F2DEDE !important;
+}
+
+/* \Popup */

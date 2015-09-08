@@ -1,0 +1,18 @@
+#tygh_html .entry-content a, #tygh_html .entry-summary a, #tygh_html .page-content a, #tygh_html .comment-content a {
+    border-bottom: none;
+}
+
+#tygh_html .entry-content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#tygh_html .entry-header {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#tygh_html .hentry {
+    margin-left: 20px;
+    margin-right: 20px;
+}

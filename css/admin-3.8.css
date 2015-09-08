@@ -1,0 +1,25 @@
+@font-face {
+font-family: 'merchium-logo-font';
+src: url('../fonts/merchium-logo-font.eot');
+src: url('../fonts/merchium-logo-font.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/merchium-logo-font.woff') format('woff'),
+     url('../fonts/merchium-logo-font.ttf') format('truetype'),
+     url('../fonts/merchium-logo-font.svg#merchium-logo-font') format('svg');
+}
+#adminmenu #toplevel_page_merchium div.wp-menu-image:before {
+    font-family: 'merchium-logo-font', serif !important;
+    content: 'M';
+    -webkit-font-feature-settings: "liga", "dlig";
+    -ms-font-feature-settings: "liga", "dlig";
+    -moz-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+#adminmenu #toplevel_page_merchium div.wp-menu-image {
+    margin: 0px;
+    width: 34px;
+    height: 30px;
+}
